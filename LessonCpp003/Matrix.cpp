@@ -39,6 +39,11 @@ namespace MyMatrix
 
 	Matrix::Matrix(const Matrix& object)
 	{
+		if (vector != nullptr)
+		{
+			delete[] vector;
+		}
+
 		this->columns = object.columns;
 		this->rows = object.rows;
 
